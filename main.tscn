@@ -303,18 +303,12 @@ animations = [{
 [node name="Node2D" type="Node2D"]
 texture_filter = 1
 script = ExtResource("1_50gx7")
-size = Vector2i(64, 42)
+size = Vector2i(93, 42)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(32, 21)
-scale = Vector2(2, 2)
+position = Vector2(48, 31.5)
+scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_fnqdf")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.362196
-
-[node name="poly" type="Polygon2D" parent="."]
-position = Vector2(-26, -39)
-scale = Vector2(2, 2)
-color = Color(1, 1, 1, 0)
-polygon = PackedVector2Array(-16, -10.5, -16, 10.5, 16, 10.5, 16, -10.5)
+frame_progress = 0.61256
