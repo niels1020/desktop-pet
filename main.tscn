@@ -303,17 +303,18 @@ animations = [{
 [node name="Node2D" type="Node2D"]
 texture_filter = 1
 script = ExtResource("1_50gx7")
-size = Vector2i(160, 94)
+size = Vector2i(64, 42)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(32, 21)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_fnqdf")
-animation = &"crowing"
+animation = &"idle"
 autoplay = "idle"
-
-[node name="Camera2D" type="Camera2D" parent="."]
+frame_progress = 0.362196
 
 [node name="poly" type="Polygon2D" parent="."]
+position = Vector2(-26, -39)
 scale = Vector2(2, 2)
 color = Color(1, 1, 1, 0)
 polygon = PackedVector2Array(-16, -10.5, -16, 10.5, 16, 10.5, 16, -10.5)
