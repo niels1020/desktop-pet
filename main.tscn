@@ -1,7 +1,8 @@
-[gd_scene load_steps=41 format=3 uid="uid://bpso61slxvsfu"]
+[gd_scene load_steps=42 format=3 uid="uid://bpso61slxvsfu"]
 
 [ext_resource type="Texture2D" uid="uid://d16td8a5q4yvk" path="res://Bird_v002_blue_and_yellow_small.png" id="1_6tprj"]
 [ext_resource type="Script" path="res://main.gd" id="1_50gx7"]
+[ext_resource type="Script" path="res://WindowManager.cs" id="3_dkyjq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8y5nb"]
 atlas = ExtResource("1_6tprj")
@@ -233,11 +234,6 @@ animations = [{
 "name": &"landing",
 "speed": 5.0
 }, {
-"frames": [],
-"loop": true,
-"name": &"new_animation",
-"speed": 5.0
-}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_c1h3c")
@@ -303,12 +299,14 @@ animations = [{
 [node name="Node2D" type="Node2D"]
 texture_filter = 1
 script = ExtResource("1_50gx7")
-size = Vector2i(93, 42)
+size = Vector2(96, 63)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(48, 31.5)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_fnqdf")
-animation = &"idle"
+animation = &"flying"
 autoplay = "idle"
-frame_progress = 0.61256
+
+[node name="man" type="Node" parent="."]
+script = ExtResource("3_dkyjq")
