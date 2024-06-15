@@ -1,8 +1,10 @@
-[gd_scene load_steps=42 format=3 uid="uid://bpso61slxvsfu"]
+[gd_scene load_steps=44 format=3 uid="uid://bpso61slxvsfu"]
 
 [ext_resource type="Texture2D" uid="uid://d16td8a5q4yvk" path="res://Bird_v002_blue_and_yellow_small.png" id="1_6tprj"]
 [ext_resource type="Script" path="res://main.gd" id="1_50gx7"]
-[ext_resource type="Script" path="res://WindowManager.cs" id="3_dkyjq"]
+[ext_resource type="Script" path="res://addons/monitor_overlay/monitor_overlay.gd" id="4_3e64f"]
+[ext_resource type="AudioStream" uid="uid://dribm6mboxaji" path="res://birds-chirping.wav" id="5_5j01p"]
+[ext_resource type="Script" path="res://WindowManager2.cs" id="7_5cyup"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8y5nb"]
 atlas = ExtResource("1_6tprj")
@@ -297,16 +299,40 @@ animations = [{
 }]
 
 [node name="Node2D" type="Node2D"]
+process_mode = 3
 texture_filter = 1
 script = ExtResource("1_50gx7")
-size = Vector2(96, 63)
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(48, 31.5)
-scale = Vector2(3, 3)
-sprite_frames = SubResource("SpriteFrames_fnqdf")
-animation = &"flying"
-autoplay = "idle"
+size = Vector2(200, 44)
 
 [node name="man" type="Node" parent="."]
-script = ExtResource("3_dkyjq")
+script = ExtResource("7_5cyup")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+texture_filter = 1
+position = Vector2(500, 284)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+position = Vector2(2, 14)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_fnqdf")
+animation = &"picking"
+autoplay = "idle"
+frame_progress = 0.312012
+
+[node name="Line" type="Line2D" parent="."]
+visible = false
+
+[node name="MonitorOverlay" type="VBoxContainer" parent="."]
+visible = false
+custom_minimum_size = Vector2(300, 0)
+offset_right = 300.0
+offset_bottom = 50.0
+script = ExtResource("4_3e64f")
+static_memory = true
+nodes = true
+background_color = Color(0, 0, 0, 0)
+
+[node name="audio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_5j01p")
+
+[connection signal="animation_looped" from="CharacterBody2D/AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_looped"]

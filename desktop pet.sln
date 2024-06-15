@@ -1,6 +1,6 @@
 ﻿Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "desktop pet", "desktop pet.csproj", "{4497C4FD-2CAC-4B7D-8F4C-2BE05133C6D6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "desktop pet", "desktop pet.csproj", "{1D7DA26B-56A7-42EE-8164-1D3CE27AADCF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,11 +9,11 @@ Global
 	ExportRelease|Any CPU = ExportRelease|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4497C4FD-2CAC-4B7D-8F4C-2BE05133C6D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4497C4FD-2CAC-4B7D-8F4C-2BE05133C6D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4497C4FD-2CAC-4B7D-8F4C-2BE05133C6D6}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
-		{4497C4FD-2CAC-4B7D-8F4C-2BE05133C6D6}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
-		{4497C4FD-2CAC-4B7D-8F4C-2BE05133C6D6}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
-		{4497C4FD-2CAC-4B7D-8F4C-2BE05133C6D6}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+		{1D7DA26B-56A7-42EE-8164-1D3CE27AADCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D7DA26B-56A7-42EE-8164-1D3CE27AADCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D7DA26B-56A7-42EE-8164-1D3CE27AADCF}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{1D7DA26B-56A7-42EE-8164-1D3CE27AADCF}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{1D7DA26B-56A7-42EE-8164-1D3CE27AADCF}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{1D7DA26B-56A7-42EE-8164-1D3CE27AADCF}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
 	EndGlobalSection
 EndGlobal
